@@ -14,10 +14,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-<<<<<<< HEAD
-$router->get('/key', function() {
-    return str_random(32);
-});
+
 $router->group(['prefix'=>'ota-red-api'], function () use ($router){
     $router->get('reservations',
         'ReservationController@showAllReservations'
@@ -39,8 +36,6 @@ $router->group(['prefix'=>'ota-red-api'], function () use ($router){
         'ReservationController@delete'
     );
 });
-=======
 
 //Github webhook1//
 $router->post('deploy', 'DeployController@deploy');
->>>>>>> f694402e6fc09d2fd37c3bab551596478ceba2ae
