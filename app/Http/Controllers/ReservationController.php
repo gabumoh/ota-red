@@ -17,7 +17,7 @@ class ReservationController extends Controller
 
     public function showAllReservations()
     {
-       $reservations = Reservation::all();
+       $reservations = Reservation::latest()->take(10)->get();
 
        return response()->json($reservations, 200);
     }
