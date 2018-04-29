@@ -25,6 +25,7 @@ class CreateReservationsTable extends Migration
             $table->unsignedInteger('number_of_guests');                      
             $table->dateTime('check_in')->useCurrent();
             $table->dateTime('check_out')->nullable();
+            $table->boolean('retrieved')->default(0);
             $table->string('paid_status')->default('Not Paid');
             $table->string('booking_status')->default('Pending');
             $table->string('made_by');

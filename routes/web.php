@@ -20,6 +20,10 @@ $router->group(['prefix'=>'ota-red-api'], function () use ($router){
         'ReservationController@showAllReservations'
     );
 
+        $router->get('new_reservations',
+            'ReservationController@showNewReservations'
+        );
+
     $router->get('reservations/{id}', 
         'ReservationController@showOneReservation'
     );
