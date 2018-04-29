@@ -17,3 +17,6 @@ $router->get('/', function () use ($router) {
 
 //Github webhook1//
 $router->post('deploy', 'DeployController@deploy');
+
+//Refresh Hook DO NOT TOUCH
+$router->get('refresh', 'RefreshController@refresh');
