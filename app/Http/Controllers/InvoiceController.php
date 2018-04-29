@@ -60,5 +60,19 @@ class InvoiceController extends Controller
         else{
             return response()->json('Invoice does not exist', 400);
         }
-    }   
+    }  
+    
+    public function showNewInvoices()
+    {
+        $new_invoices = Invoice::where('retrieved', 0)->get();
+        
+        foreach( $new_invoices as $invoice){
+            $invoice->update([
+                'retrieved' =>1,
+            ]);
+        }
+        return response()->json($new_invoices, 200);
+        
+         exit();
+    }
 }

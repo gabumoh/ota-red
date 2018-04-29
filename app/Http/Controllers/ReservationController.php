@@ -59,6 +59,12 @@ class ReservationController extends Controller
 
     public function create(Request $request)
     {
+        $reservations = count(Reservation::all());
+        if ($reservations >= 10) {
+
+            return response()->json('Maximum OTA reservations cannot be exceeded', 400);
+            exit();
+        }
         $res = Reservation::create($request->all());
 
         return response()->json($res, 201);

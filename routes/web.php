@@ -45,6 +45,10 @@ $router->group(['prefix'=>'ota-red-api'], function () use ($router){
         'InvoiceController@showAllInvoices'
     );
 
+    $router->get('new_invoices',
+        'InvoiceController@showNewInvoices'
+    );
+
     $router->get('invoices/{id}', 
         'InvoiceController@showOneInvoice'
     );
