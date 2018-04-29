@@ -7,7 +7,7 @@ use Symfony\Component\Process\Process;
 
 class RefreshController extends Controller
 {
-    public function deploy(Request $request)
+    public function refresh(Request $request)
     {
         
         $root_path = base_path();
