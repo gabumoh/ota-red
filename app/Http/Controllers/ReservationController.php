@@ -25,13 +25,17 @@ class ReservationController extends Controller
 
     public function showNewReservations()
     {
-        $new_reservations = Reservation::where('retrieved', 0)->get();
+        $new_reservations = Reservation::where('retrieved', 0)->first();
         
-        foreach( $new_reservations as $reserve){
-            $reserve->update([
-                'retrieved' =>1,
-            ]);
-        }
+        // foreach( $new_reservations as $reserve){
+        //     $reserve->update([
+        //         'retrieved' =>1,
+        //     ]);
+        // }
+        $new_reservervation->update([
+
+            'retrieved' =>1,
+        ]);
         return response()->json($new_reservations, 200);
         
          exit();
