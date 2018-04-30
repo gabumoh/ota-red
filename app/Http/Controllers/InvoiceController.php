@@ -64,14 +64,17 @@ class InvoiceController extends Controller
     
     public function showNewInvoices()
     {
-        $new_invoices = Invoice::where('retrieved', 0)->get();
+        $new_invoice = Invoice::where('retrieved', 0)->first();
         
-        foreach( $new_invoices as $invoice){
-            $invoice->update([
-                'retrieved' =>1,
-            ]);
-        }
-        return response()->json($new_invoices, 200);
+        // foreach( $new_invoices as $invoice){
+        //     $invoice->update([
+        //         'retrieved' =>1,
+        //     ]);
+        // }
+        $new_invoice->update([
+            'retrieved' =>1,
+        ]);
+        return response()->json($new_invoice, 200);
         
          exit();
     }
