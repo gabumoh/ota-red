@@ -18,6 +18,13 @@ class ReservationController extends Controller
     public function showAllReservations()
     {
        $reservations = Reservation::latest()->take(10)->get();
+        $reservations = [
+            'data' => [
+                'reservation_data'=>[
+                    'reservations'=>$reservations
+                ]
+            ]
+        ];
 
        return response()->json($reservations, 200);
     }
@@ -44,8 +51,17 @@ class ReservationController extends Controller
     public function showOneReservation(Request $request, $id)
     {
             $reservation = Reservation::findOrFail($id);
+
             
             if ($reservation) {
+                $reservation = [
+                    'data' => [
+                        'reservation_data'=>[
+                            'reservations'=>$reservation
+                        ]
+                    ]
+                ];
+        
                 return response()->json($reservation, 200);
             }else{
                 return response()->json('Not Found', 400);            
