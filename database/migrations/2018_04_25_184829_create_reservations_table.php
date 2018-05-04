@@ -28,7 +28,7 @@ class CreateReservationsTable extends Migration
             $table->boolean('retrieved')->default(0);
             $table->string('paid_status')->default('Not Paid');
             $table->string('booking_status')->default('Pending');
-            $table->string('ref_code', 100)->unique();
+            $table->string('booking_id', 100)->unique();
             $table->string('made_by');
             $table->text('comments');
             $table->timestamps();
