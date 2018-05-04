@@ -64,6 +64,28 @@ $router->group(['prefix'=>'ota-red-api'], function () use ($router){
     $router->delete('invoices/{id}', 
         'InvoiceController@delete'
     );
+
+      //====================Review==================//
+
+    $router->get('reviews',
+        'ReviewController@showAllreviews'
+    );
+
+    $router->get('reviews/{id}', 
+        'ReviewController@showOneReview'
+    );
+
+    $router->post('reviews', 
+        'ReviewController@create'
+    );
+
+    $router->put('reviews/{id}', 
+        'ReviewController@update'
+    );
+
+    $router->delete('reviews/{id}', 
+        'ReviewController@delete'
+    );
 });
 
 //Github webhook1//

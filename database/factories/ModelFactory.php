@@ -81,3 +81,4 @@ $factory->define(App\Invoice::class, function (Faker\Generator $faker) {
         'updated_at'=> $faker->dateTimeInInterval($startDate = 'now', $interval = '+ 5 days', $timezone = 'Africa/Lagos'),
     ];
 });
+
