@@ -39,6 +39,7 @@ $factory->define(App\Reservation::class, function (Faker\Generator $faker) {
                 'Mfonobong Umondia', 'Bassey Humphery', 'Umar Ibrahim', 'ALH. Umaro Kwankwaso', 'Effiong Edidiong',
                 'Nwoye Chibuzo', 'Ekweremadu Chigozie', 
     ];
+    $id = hexdec(md5(uniqid(rand(0, 4))));
 return [
     'property_id' => $faker->numberBetween(1, 20),
     'room_category_id' => $faker->numberBetween(1, 20),
@@ -53,7 +54,7 @@ return [
     'made_by' =>$made_by[rand(0,10)],
     'paid_status' => $rand_str[$index],
     'booking_status' => $rand_str[$index],
-    'booking_id' => substr(hexdec(md5(uniqid(rand(0, 4)))), 0, 6),
+    'booking_id' => substr(str_replace('.','', $id), 0, 6),
     'comments' => $comments[$comment],
     'created_at'=> $faker->dateTimeInInterval($startDate = 'now', $interval = '+ 5 days', $timezone = 'Africa/Lagos'),
 
