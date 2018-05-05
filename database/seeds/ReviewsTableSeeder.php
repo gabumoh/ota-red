@@ -14,18 +14,18 @@ class ReviewsTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-            Review::create([
-                'guest_id' => $faker->numberBetween(1, 10),
-                'channel_id' => 2,
-                'property_id' => $faker->numberBetween(1, 10),
-                'message_title' => 'Feeling Grateful',
-                'message' => 'My experience in your hotels was awesome. Everything worked as I expected. Thanks for a wonderful service',
-                'status' => 1,
-                'review_id' => substr(md5(uniqid(rand(5,8))), 0,6),
-                'rating' => 5,
-                'created_at'=> $faker->dateTimeInInterval($startDate = 'now', $interval = '+ 5 days', $timezone = 'Africa/Lagos'),
-                'updated_at'=> $faker->dateTimeInInterval($startDate = 'now', $interval = '+ 5 days', $timezone = 'Africa/Lagos'),
-            ]);
+            // Review::create([
+            //     'guest_id' => $faker->numberBetween(1, 10),
+            //     'channel_id' => 2,
+            //     'property_id' => $faker->numberBetween(1, 10),
+            //     'message_title' => 'Feeling Grateful',
+            //     'message' => 'My experience in your hotels was awesome. Everything worked as I expected. Thanks for a wonderful service',
+            //     'status' => 1,
+            //     'review_id' => substr(md5(uniqid(rand(5,8))), 0,6),
+            //     'rating' => 5,
+            //     'created_at'=> $faker->dateTimeInInterval($startDate = 'now', $interval = '+ 5 days', $timezone = 'Africa/Lagos'),
+            //     'updated_at'=> $faker->dateTimeInInterval($startDate = 'now', $interval = '+ 5 days', $timezone = 'Africa/Lagos'),
+            // ]);
 
             Review::create([
                 'guest_id' => $faker->numberBetween(1, 10),
