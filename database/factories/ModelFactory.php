@@ -41,8 +41,8 @@ $factory->define(App\Reservation::class, function (Faker\Generator $faker) {
     ];
     $id = hexdec(md5(uniqid(rand(0, 4))));
 return [
-    'property_id' => $faker->numberBetween(1, 20),
-    'room_category_id' => $faker->numberBetween(1, 20),
+    'property_id' => 1,
+    'room_category_id' => rand(1,3),
     'guest_id' => $faker->numberBetween(1, 20),
     'stay_id' => $faker->numberBetween(1, 20),
     'channel_id' => $faker->numberBetween(1, 20),

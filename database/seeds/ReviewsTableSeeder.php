@@ -30,7 +30,7 @@ class ReviewsTableSeeder extends Seeder
             Review::create([
                 'guest_id' => $faker->numberBetween(1, 10),
                 'channel_id' => 1,
-                'property_id' => $faker->numberBetween(1, 10),
+                'property_id' => 1,
                 'message_title' => 'Dissatisfaction',
                 'message' => 'I was utterly disappointed with your facilities, do make sure you put things to good shape',
                 'status' => 2,
@@ -43,7 +43,7 @@ class ReviewsTableSeeder extends Seeder
             Review::create([
                 'guest_id' => $faker->numberBetween(1, 10),
                 'channel_id' => 2,
-                'property_id' => $faker->numberBetween(1, 10),
+                'property_id' => 1,
                 'message_title' => 'My opinion',
                 'message' => 'Your hotel is really a place to be. Excellent services, state-of-the-art facilities, I can\'t testify enough, kudos!',
                 'status' => 3,
@@ -56,7 +56,7 @@ class ReviewsTableSeeder extends Seeder
             Review::create([
                 'guest_id' => $faker->numberBetween(1, 10),
                 'channel_id' => 1,
-                'property_id' => $faker->numberBetween(1, 10),
+                'property_id' => 1,
                 'message_title' => 'Wonderful place to be',
                 'message' => 'Wow, your hotels is indeed a london in Africa, modern facilities, smart attendants just to mention but a few',
                 'status' => 1,
