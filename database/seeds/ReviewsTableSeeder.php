@@ -28,7 +28,7 @@ class ReviewsTableSeeder extends Seeder
             // ]);
 
             Review::create([
-                'guest_id' => $faker->numberBetween(1, 10),
+                'guest_id' => rand(1,4),
                 'channel_id' => 1,
                 'property_id' => 1,
                 'message_title' => 'Dissatisfaction',
@@ -41,7 +41,7 @@ class ReviewsTableSeeder extends Seeder
             ]);
 
             Review::create([
-                'guest_id' => $faker->numberBetween(1, 10),
+                'guest_id' => rand(1,4),
                 'channel_id' => 2,
                 'property_id' => 1,
                 'message_title' => 'My opinion',
@@ -54,7 +54,7 @@ class ReviewsTableSeeder extends Seeder
             ]);
 
             Review::create([
-                'guest_id' => $faker->numberBetween(1, 10),
+                'guest_id' => rand(1,4),
                 'channel_id' => 1,
                 'property_id' => 1,
                 'message_title' => 'Wonderful place to be',
