@@ -53,7 +53,7 @@ return [
     'number_of_rooms' => $faker->numberBetween(1, 10),
     'made_by' =>$made_by[rand(0,10)],
     'paid_status' => $rand_str[$index],
-    'booking_status' => $rand_str[$index],
+    'booking_status' => 'pending',
     'booking_id' => substr(str_replace('.','', $id), 0, 6),
     'comments' => $comments[$comment],
     'created_at'=> $faker->dateTimeInInterval($startDate = 'now', $interval = '+ 5 days', $timezone = 'Africa/Lagos'),
