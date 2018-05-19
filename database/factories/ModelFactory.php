@@ -45,7 +45,7 @@ return [
     'room_category_id' => rand(1,3),
     'guest_id' => rand(1,4),
     'stay_id' => $faker->numberBetween(1, 20),
-    'channel_id' => $faker->numberBetween(1, 20),
+    'channel_id' => $faker->numberBetween(1, 3),
     'reservation_payment_id' => $faker->numberBetween(1, 20),    
     'check_in' => $faker->dateTimeInInterval($startDate = 'now', $interval = '+ 5 days', $timezone = 'Africa/Lagos'),
     'check_out'=> $faker->dateTimeInInterval($startDate = '+ 5 days', $interval = '+ 5 days', $timezone = 'Africa/Lagos'),
@@ -57,6 +57,7 @@ return [
     'booking_id' => substr(str_replace('.','', $id), 0, 6),
     'comments' => $comments[$comment],
     'created_at'=> $faker->dateTimeInInterval($startDate = 'now', $interval = '+ 5 days', $timezone = 'Africa/Lagos'),
+    
 
 ];
 });
