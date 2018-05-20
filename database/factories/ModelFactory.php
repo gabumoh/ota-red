@@ -20,9 +20,9 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Reservation::class, function (Faker\Generator $faker) {
     $rand_str = ['Pay on Arrival', 'Paid to OTA', 'Paid to Hotel'];
-    $index = rand(0,1);
+    $index = rand(0,2);
     $comment = rand(0,5);
-    $rand_int = [0,1,2];
+    $rand_int = [0,1];
     $comments = [
         'Please I would need constant power during my stay, the business for which I\'d be needing 
         this lodging is such that epileptic power would not be welcome. Should this condition will not
