@@ -19,7 +19,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Reservation::class, function (Faker\Generator $faker) {
-    $rand_str = ['Not paid', 'Paid'];
+    $rand_str = ['Pay on Arrival', 'Paid to OTA', 'Paid to Hotel'];
     $index = rand(0,1);
     $comment = rand(0,5);
     $rand_int = [0,1];
