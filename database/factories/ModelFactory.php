@@ -39,6 +39,8 @@ $factory->define(App\Reservation::class, function (Faker\Generator $faker) {
                 'Mfonobong Umondia', 'Bassey Humphery', 'Umar Ibrahim', 'ALH. Umaro Kwankwaso', 'Effiong Edidiong',
                 'Nwoye Chibuzo', 'Ekweremadu Chigozie', 
     ];
+
+    $currency = ['USD', 'NGN'];
     $id = hexdec(md5(uniqid(rand(0, 4))));
 return [
     'property_id' => 1,
@@ -52,6 +54,7 @@ return [
     'number_of_guests' =>$faker->numberBetween(1, 10),
     'number_of_rooms' => $faker->numberBetween(1, 10),
     'made_by' =>$made_by[rand(0,10)],
+    'currency_code' => $currency[rand(0,1)],
     'paid_status' => $rand_str[$index],
     'booking_status' => 'pending',
     'booking_id' => substr(str_replace('.','', $id), 0, 6),
