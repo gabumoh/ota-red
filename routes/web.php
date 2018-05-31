@@ -86,6 +86,8 @@ $router->group(['prefix'=>'ota-red-api'], function () use ($router){
     $router->delete('reviews/{id}', 
         'ReviewController@delete'
     );
+     
+    $router->post('reviews/response', 'ReviewController@response');
 });
 
 //Github webhook1//

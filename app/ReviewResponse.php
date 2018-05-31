@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Review extends Model
+class ReviewResponse extends Model
 {
 
     /**
@@ -12,8 +12,8 @@ class Review extends Model
      *
      * @var array
      */
+    protected $table = 'review_responses'; 
     protected $guarded = [];
-    protected $table = 'reviews';
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -22,8 +22,8 @@ class Review extends Model
      */
     protected $hidden = [];
 
-    public function response()
+    public function review()
     {
-        return $this->hasMany(ReviewResponse::class, 'review_id');
+        return $this->belongsTo(Review::class, 'review_id');
     }
 }

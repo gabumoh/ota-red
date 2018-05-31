@@ -83,5 +83,19 @@ class ReviewController extends Controller
         else{
             return response()->json('Review does not exist', 400);
         }
-    }   
+    }
+    
+    public function response(Request $request)
+    {
+        $reponse = ReviewResponse::create([
+            $request->all()
+        ]);
+
+        if ($response) {
+            return response()->json(['status' => 'success'], 201);
+        }
+        else {
+            return response()->json(['status' => 'error'], 500);
+        }
+    }
 }
