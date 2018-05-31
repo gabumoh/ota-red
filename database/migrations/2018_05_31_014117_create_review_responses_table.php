@@ -15,7 +15,7 @@ class CreateReviewResponsesTable extends Migration
     {
         Schema::create('review_responses', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('review_id');
+            $table->string('review_id');
             $table->string('message');
             $table->timestamps();
         });
