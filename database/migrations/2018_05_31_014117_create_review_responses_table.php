@@ -17,6 +17,7 @@ class CreateReviewResponsesTable extends Migration
             $table->increments('id');
             $table->string('review_id');
             $table->string('message');
+            $table->string('responder');
             $table->timestamps();
         });
     }
