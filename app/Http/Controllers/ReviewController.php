@@ -88,20 +88,14 @@ class ReviewController extends Controller
     
     public function response(Request $request)
     {
-        $reponse = ReviewResponse::create([
-            $request->all()
-        ]);
-        // $r = new ReviewResponse;
+        $response = ReviewResponse::create($request->all());
+ 
 
-        // $r->message = $request->message;
-        // $r->responder = $request->responder;
-        // $r->review_id = $request->review_id;
-
-        // if ($r->save()) {
+        if ($response) {
             return response()->json(['status' => 'success', 'data'=> $response], 201);
-        // }
-        // else {
-        //     return response()->json(['status' => 'error'], 500);
-        // }
+        }
+        else {
+            return response()->json(['status' => 'error'], 500);
+        }
     }
 }
